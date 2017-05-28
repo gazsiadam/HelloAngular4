@@ -2,19 +2,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
+import { ListComponent } from './list/list.component';
+import { MovieServiceService } from './services/movies/movie-service.service';
+import { BoldDirective } from './directives/bold/bold.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListComponent,
+    BoldDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    CommonModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [MovieServiceService],
+  bootstrap: [AppComponent, ListComponent]
 })
 export class AppModule { }

@@ -5,6 +5,15 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
-  title = 'app works!';
+  public title = 'app works!';
+  private header = 'Privte Header';
+  protected footer = 'protected footer';
+
+  func(a: string) {
+    return a + 'Hello world';
+  }
+
 }
